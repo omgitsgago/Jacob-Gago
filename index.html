@@ -43,6 +43,7 @@
       <ul class="nav-links" id="nav-links" role="list">
         <li><a href="#creator" class="nav-link">Creator</a></li>
         <li><a href="#music" class="nav-link">Music</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link nav-cta">Work With Me</a></li>
       </ul>
@@ -65,51 +66,24 @@
     </div>
 
     <div class="hero-content container">
-      <p class="hero-label reveal-fade">GRAMMY-Nominated Producer &nbsp;&middot;&nbsp; Content Creator &nbsp;&middot;&nbsp; Los Angeles</p>
-      <h1 class="hero-headline">
-        <span class="hero-line">
-          <span class="hero-word" data-delay="0">BUILT</span>
-          <span class="hero-word hero-accent" data-delay="120">different.</span>
-        </span>
-        <span class="hero-line">
-          <span class="hero-word" data-delay="240">ALWAYS</span>
-          <span class="hero-word" data-delay="360">CREATING.</span>
-        </span>
-        <span class="hero-line">
-          <span class="hero-word hero-italic" data-delay="520">Literally.</span>
-        </span>
-      </h1>
-      <div class="hero-actions reveal-fade-delay">
-        <a href="#contact" class="btn btn-primary">Work With Me</a>
-        <a href="#creator" class="btn btn-ghost">See My Work</a>
-      </div>
-    </div>
-
-    <div class="stats-bar" id="stats-bar">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <span class="stat-number" data-target="1">0</span>
-            <span class="stat-label">Grammy Nom</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="6" data-suffix="+">0</span>
-            <span class="stat-label">Placements</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="5">0</span>
-            <span class="stat-label">Instruments</span>
-          </div>
-          <div class="stat-divider" aria-hidden="true"></div>
-          <div class="stat-item">
-            <span class="stat-symbol">&#8734;</span>
-            <span class="stat-label">Lanes Refused</span>
-          </div>
+      <div class="hero-split">
+        <div class="hero-left">
+          <p class="hero-label reveal-fade">GRAMMY-Nominated Producer &nbsp;&middot;&nbsp; Content Creator</p>
+        </div>
+        <div class="hero-right">
+          <h1 class="hero-name reveal-fade">
+            <span class="hero-name-line">JACOB</span>
+            <span class="hero-name-line hero-name-accent">GAGO</span>
+          </h1>
         </div>
       </div>
     </div>
+
+    <a href="#creator" class="scroll-indicator" aria-label="Scroll down">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 5v14M5 13l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
   </section>
 
   <!-- ============================================================
@@ -128,7 +102,6 @@
       </div>
       <p class="section-intro fade-up">Tech, music, lifestyle — content for creators who refuse to be boxed in.</p>
       <div class="video-grid" id="video-grid">
-        <!-- Populated by youtube.js — replace VIDEO_IDs in assets/js/youtube.js -->
         <div class="video-loading">
           <span>Loading videos&hellip;</span>
         </div>
@@ -148,42 +121,103 @@
         </div>
       </div>
 
-      <h3 class="subsection-title fade-up">Placements</h3>
-      <div class="placements-grid">
-        <article class="placement-card fade-up">
-          <div class="placement-platform">Apple TV+</div>
-          <div class="placement-title">LOOT</div>
-          <span class="placement-badge">TV Sync</span>
-        </article>
-        <article class="placement-card fade-up">
-          <div class="placement-platform">ABC</div>
-          <div class="placement-title">The Rookie <span class="placement-season">S7</span></div>
-          <span class="placement-badge">TV Sync</span>
-        </article>
-        <article class="placement-card fade-up">
-          <div class="placement-platform">Artist</div>
-          <div class="placement-title">Anitta &mdash; Funk Generation</div>
-          <span class="placement-badge">Production</span>
-        </article>
-        <article class="placement-card fade-up">
-          <div class="placement-platform">Netflix</div>
-          <div class="placement-title">Uglies</div>
-          <span class="placement-badge">Film Sync</span>
-        </article>
-        <article class="placement-card fade-up">
-          <div class="placement-platform">Artist</div>
-          <div class="placement-title">Normani &mdash; Dopamine</div>
-          <span class="placement-badge">Production</span>
-        </article>
-        <article class="placement-card fade-up">
-          <div class="placement-platform">Hulu</div>
-          <div class="placement-title">Royal Rules of Ohio</div>
-          <span class="placement-badge">TV Sync</span>
-        </article>
+      <h3 class="subsection-title fade-up">Latest Placements</h3>
+
+      <div class="placements-carousel fade-up">
+        <div class="placements-track" id="placements-track">
+
+          <article class="placement-card">
+            <div class="placement-img-wrap">
+              <img src="assets/images/Placements/Loot.jpg" alt="LOOT — Apple TV+" loading="lazy">
+            </div>
+            <div class="placement-info">
+              <div class="placement-platform">Apple TV+</div>
+              <div class="placement-title">LOOT</div>
+              <span class="placement-badge">TV Sync</span>
+            </div>
+          </article>
+
+          <article class="placement-card">
+            <div class="placement-img-wrap">
+              <img src="assets/images/Placements/The rookie.jpg" alt="The Rookie S7 — ABC" loading="lazy">
+            </div>
+            <div class="placement-info">
+              <div class="placement-platform">ABC</div>
+              <div class="placement-title">The Rookie <span class="placement-season">S7</span></div>
+              <span class="placement-badge">TV Sync</span>
+            </div>
+          </article>
+
+          <article class="placement-card">
+            <div class="placement-img-wrap">
+              <img src="assets/images/Placements/Anita.jpg" alt="Anitta — Funk Generation" loading="lazy">
+            </div>
+            <div class="placement-info">
+              <div class="placement-platform">Artist</div>
+              <div class="placement-title">Anitta &mdash; Funk Generation</div>
+              <span class="placement-badge">Production</span>
+            </div>
+          </article>
+
+          <article class="placement-card">
+            <div class="placement-img-wrap">
+              <img src="assets/images/Placements/Uglies.jpg" alt="Uglies — Netflix" loading="lazy">
+            </div>
+            <div class="placement-info">
+              <div class="placement-platform">Netflix</div>
+              <div class="placement-title">Uglies</div>
+              <span class="placement-badge">Film Sync</span>
+            </div>
+          </article>
+
+          <article class="placement-card">
+            <div class="placement-img-wrap">
+              <img src="assets/images/Placements/Normani.jpg" alt="Normani — Dopamine" loading="lazy">
+            </div>
+            <div class="placement-info">
+              <div class="placement-platform">Artist</div>
+              <div class="placement-title">Normani &mdash; Dopamine</div>
+              <span class="placement-badge">Production</span>
+            </div>
+          </article>
+
+          <article class="placement-card">
+            <div class="placement-img-wrap">
+              <img src="assets/images/Placements/Royal Rules.jpg" alt="Royal Rules of Ohio — Hulu" loading="lazy">
+            </div>
+            <div class="placement-info">
+              <div class="placement-platform">Hulu</div>
+              <div class="placement-title">Royal Rules of Ohio</div>
+              <span class="placement-badge">TV Sync</span>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prev-placement" aria-label="Previous placement">&#8592;</button>
+          <button class="carousel-btn" id="next-placement" aria-label="Next placement">&#8594;</button>
+        </div>
       </div>
 
-      <h3 class="subsection-title fade-up">Services</h3>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section class="section-services" id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-header-left">
+          <span class="section-tag">/ 03</span>
+          <h2 class="section-title">SERVICES</h2>
+        </div>
+        <a href="#contact" class="section-link">Work With Me &rarr;</a>
+      </div>
+
       <div class="services-grid">
+
         <div class="service-card fade-up">
           <div class="service-icon">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
@@ -197,6 +231,7 @@
           <p class="service-desc">Professional mixing and mastering for artists and labels worldwide. Precision-crafted sound built for streaming, sync, and live — at any level.</p>
           <a href="#contact" class="btn btn-outline">Inquire for Pricing</a>
         </div>
+
         <div class="service-card fade-up">
           <div class="service-icon">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
@@ -204,10 +239,36 @@
               <path d="M6 32 C6 24 30 24 30 32" stroke="#d4a24c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
             </svg>
           </div>
-          <h4 class="service-title">Production Mentorship 1-on-1</h4>
+          <h4 class="service-title">1-on-1 Music Production Mentorship</h4>
           <p class="service-desc">Personalized sessions to level up your craft. From beatmaking to full production — tailored to where you are and where you're going.</p>
           <a href="#contact" class="btn btn-outline">Inquire for Pricing</a>
         </div>
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <path d="M8 28 L28 8" stroke="#d4a24c" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="12" cy="24" r="5" stroke="#d4a24c" stroke-width="1.5" fill="none"/>
+              <circle cx="24" cy="12" r="5" stroke="#d4a24c" stroke-width="1.5" fill="none"/>
+              <path d="M26 6 L30 10 L20 20" stroke="#d4a24c" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+            </svg>
+          </div>
+          <h4 class="service-title">Production &amp; Songwriting</h4>
+          <p class="service-desc">Full production and songwriting services from concept to final master. Co-writing, toplining, and custom music for artists at every level.</p>
+          <a href="#contact" class="btn btn-outline">Inquire for Pricing</a>
+        </div>
+
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <path d="M18 4 L21.5 13.5 L32 13.5 L23.5 19.5 L27 29 L18 23 L9 29 L12.5 19.5 L4 13.5 L14.5 13.5 Z" stroke="#d4a24c" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="service-title">Sponsorships</h4>
+          <p class="service-desc">Partner with Jacob's YouTube channel for product features, reviews, and integrations. Reach a targeted creator and tech-forward audience.</p>
+          <a href="#contact" class="btn btn-outline">Inquire</a>
+        </div>
+
       </div>
     </div>
   </section>
@@ -219,34 +280,34 @@
     <div class="container">
       <div class="section-header fade-up">
         <div class="section-header-left">
-          <span class="section-tag">/ 03</span>
+          <span class="section-tag">/ 04</span>
           <h2 class="section-title">CLIENTS</h2>
         </div>
       </div>
       <div class="clients-grid">
         <div class="client-logo fade-up">
-          <span>Warner Music<br>Group</span>
+          <img src="assets/images/Logo/Warner_Music_Group_logo_(2021).svg.png" alt="Warner Music Group">
         </div>
         <div class="client-logo fade-up">
-          <span>Interscope<br>Records</span>
+          <img src="assets/images/Logo/Interscope_Records.svg.png" alt="Interscope Records">
         </div>
         <div class="client-logo fade-up">
-          <span>Republic<br>Records</span>
+          <img src="assets/images/Logo/Republic_Records_logo.svg.png" alt="Republic Records">
         </div>
         <div class="client-logo fade-up">
-          <span>Atlantic<br>Records</span>
+          <img src="assets/images/Logo/Atlantic_Records_fan_logo.svg.png" alt="Atlantic Records">
         </div>
         <div class="client-logo fade-up">
           <span>Netflix</span>
         </div>
         <div class="client-logo fade-up">
-          <span>Hulu</span>
+          <img src="assets/images/Logo/Hulu_logo_(2018).svg.png" alt="Hulu">
         </div>
         <div class="client-logo fade-up">
-          <span>Apple TV+</span>
+          <img src="assets/images/Logo/Apple_TV_(logo).svg.png" alt="Apple TV+">
         </div>
         <div class="client-logo fade-up">
-          <span>The CW</span>
+          <img src="assets/images/Logo/The_CW_2024.svg.png" alt="The CW">
         </div>
       </div>
     </div>
@@ -261,29 +322,29 @@
         <div class="about-content">
           <div class="section-header">
             <div class="section-header-left">
-              <span class="section-tag">/ 04</span>
+              <span class="section-tag">/ 05</span>
               <h2 class="section-title fade-up">ABOUT</h2>
             </div>
           </div>
           <p class="about-bio fade-up">
-            Jacob Gago is a GRAMMY-nominated music producer, mixing engineer, and content creator based in Los Angeles. A former CPA who traded spreadsheets for studio sessions, Jacob has placed music across major network and streaming productions, collaborated with Grammy-winning artists, and built a community of creators on YouTube — all while refusing to stay in one lane.
+            Jacob Gago is a different kind of creator&mdash;a GRAMMY-nominated music producer, content creator, and tech enthusiast based in Los Angeles, California. He has produced for Grammy-winning artists and has music featured across major TV, film, and game productions. Beyond the studio, Jacob has built a loyal YouTube community and partnered with leading brands including Thrustmaster, Keychron, OBSBOT, Insta360, iFootage, Acasis, and more&mdash;bridging the gap between music, tech, and culture.
           </p>
           <div class="facts-panel">
             <div class="fact-item fade-up">
-              <span class="fact-label">Background</span>
-              <span class="fact-value">Former CPA</span>
+              <span class="fact-label">Role</span>
+              <span class="fact-value">Songwriter</span>
             </div>
             <div class="fact-item fade-up">
-              <span class="fact-label">Instruments</span>
-              <span class="fact-value">5 Instruments</span>
+              <span class="fact-label">Role</span>
+              <span class="fact-value">Content Creator</span>
+            </div>
+            <div class="fact-item fade-up">
+              <span class="fact-label">Role</span>
+              <span class="fact-value">Music Producer</span>
             </div>
             <div class="fact-item fade-up">
               <span class="fact-label">Location</span>
               <span class="fact-value">Los Angeles</span>
-            </div>
-            <div class="fact-item fade-up">
-              <span class="fact-label">Platform</span>
-              <span class="fact-value">YouTube Creator</span>
             </div>
           </div>
           <a href="#contact" class="btn btn-primary about-cta fade-up">Let's Create Together</a>
@@ -306,7 +367,7 @@
     <div class="container">
       <div class="section-header fade-up">
         <div class="section-header-left">
-          <span class="section-tag">/ 05</span>
+          <span class="section-tag">/ 06</span>
           <h2 class="section-title">WORK WITH ME</h2>
         </div>
       </div>
@@ -331,21 +392,20 @@
           </div>
         </div>
 
-        <!--
-          TODO BEFORE GOING LIVE: Wire the contact form to Formspree.
-          1. Sign up at https://formspree.io (free tier = 50 submissions/month)
-          2. Create a new form, set the destination email to contact@jacobgago.com
-          3. Formspree gives you a URL like https://formspree.io/f/abcdwxyz
-          4. Replace YOUR_FORM_ID below with just the code (e.g. abcdwxyz)
-          Until then: the form submit will fail gracefully and the user will see an error.
-        -->
         <form
           class="contact-form fade-up"
           id="contact-form"
-          action="https://formspree.io/f/YOUR_FORM_ID"
+          action="https://formspree.io/f/xeevkrgw"
           method="POST"
           novalidate
         >
+          <!--
+            TODO BEFORE GOING LIVE: Wire the contact form to Formspree.
+            1. Sign up at https://formspree.io (free tier = 50 submissions/month)
+            2. Create a new form, set the destination email to contact@jacobgago.com
+            3. Formspree gives you a URL like https://formspree.io/f/abcdwxyz
+            4. Replace YOUR_FORM_ID above with just the code (e.g. abcdwxyz)
+          -->
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
@@ -361,14 +421,15 @@
             <select id="subject" name="subject" required>
               <option value="" disabled selected>Select a topic</option>
               <option value="Mixing & Mastering">Mixing &amp; Mastering</option>
-              <option value="Production Mentorship">Production Mentorship</option>
-              <option value="Sync Licensing">Sync Licensing</option>
+              <option value="1-on-1 Music Production Mentorship">1-on-1 Music Production Mentorship</option>
+              <option value="Production & Songwriting">Production &amp; Songwriting</option>
+              <option value="Sponsorships">Sponsorships</option>
               <option value="Other">Other</option>
             </select>
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project&hellip;"></textarea>
+            <textarea id="message" name="message" required rows="5" placeholder="What are we building together&hellip;"></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Send Message</button>
           <div class="form-status" id="form-status" role="alert" aria-live="polite"></div>
@@ -385,12 +446,13 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#hero" class="footer-logo">JACOB GAGO</a>
-          <p class="footer-tagline">GRAMMY-Nominated Producer &nbsp;&middot;&nbsp; LA</p>
+          <p class="footer-tagline">GRAMMY-Nominated Producer &nbsp;&middot;&nbsp; Content Creator</p>
         </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="#creator">Creator</a>
           <a href="#music">Music</a>
+          <a href="#services">Services</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -404,6 +466,11 @@
           <a href="https://instagram.com/jacobgago" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+          <a href="https://tiktok.com/@jacobgago" target="_blank" rel="noopener" aria-label="TikTok" class="footer-social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
             </svg>
           </a>
         </div>

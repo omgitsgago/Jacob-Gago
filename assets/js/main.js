@@ -68,27 +68,58 @@ if (navLinks) {
 //   HERO TEXT — Staggered Word Animation
 // ============================================================
 function animateHero() {
-  const label   = document.querySelector('.hero-label');
-  const words   = document.querySelectorAll('.hero-word');
-  const actions = document.querySelector('.hero-actions');
+  const label = document.querySelector('.hero-label');
+  const name  = document.querySelector('.hero-name');
 
-  if (label) {
-    label.classList.add('revealed');
+  if (label) label.classList.add('revealed');
+  if (name)  name.classList.add('revealed');
+}
+
+// ============================================================
+//   PLACEMENTS CAROUSEL
+// ============================================================
+function initCarousel() {
+  const track   = document.getElementById('placements-track');
+  const prevBtn = document.getElementById('prev-placement');
+  const nextBtn = document.getElementById('next-placement');
+  if (!track || !prevBtn || !nextBtn) return;
+
+  let currentIndex = 0;
+
+  function getCards() {
+    return Array.from(track.querySelectorAll('.placement-card'));
   }
 
-  words.forEach(word => {
-    const delay = parseInt(word.dataset.delay ?? '0', 10);
-    word.style.animationDelay = `${(delay + 200) / 1000}s`;
-    word.classList.add('revealed');
-  });
-
-  if (actions) {
-    const lastDelay = Math.max(
-      ...Array.from(words).map(w => parseInt(w.dataset.delay ?? '0', 10))
-    );
-    actions.style.animationDelay = `${(lastDelay + 400) / 1000}s`;
-    actions.classList.add('revealed');
+  function syncIndexFromScroll() {
+    const cards = getCards();
+    if (!cards.length) return;
+    const trackLeft = track.getBoundingClientRect().left;
+    let closestIndex = 0;
+    let closestDist = Infinity;
+    cards.forEach((card, i) => {
+      const dist = Math.abs(card.getBoundingClientRect().left - trackLeft);
+      if (dist < closestDist) { closestDist = dist; closestIndex = i; }
+    });
+    currentIndex = closestIndex;
   }
+
+  let scrollTimer;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(syncIndexFromScroll, 120);
+  }, { passive: true });
+
+  function scrollToIndex(index) {
+    const cards = getCards();
+    if (!cards.length) return;
+    const total = cards.length;
+    currentIndex = ((index % total) + total) % total;
+    const card = cards[currentIndex];
+    track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+  }
+
+  nextBtn.addEventListener('click', () => scrollToIndex(currentIndex + 1));
+  prevBtn.addEventListener('click', () => scrollToIndex(currentIndex - 1));
 }
 
 // ============================================================
@@ -241,4 +272,5 @@ if (form) {
 document.addEventListener('DOMContentLoaded', () => {
   animateHero();
   observeFadeElements();
+  initCarousel();
 });

@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+node_modules/
+.vscode/
+.claude/
+*.tmp
+
+# Raw source photo — hero.jpg in assets/images/ is the deployed copy
+JG Yellow-08.jpeg

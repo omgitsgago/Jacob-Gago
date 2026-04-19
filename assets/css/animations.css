@@ -1,0 +1,155 @@
+/* ============================================================
+   JACOB GAGO — animations.css
+   ============================================================ */
+
+/* ---- Keyframes ---- */
+
+@keyframes grain-flicker {
+  0%   { transform: translate(0,    0);    }
+  10%  { transform: translate(-1%,  -1%);  }
+  20%  { transform: translate(1%,   0);    }
+  30%  { transform: translate(-1%,  1%);   }
+  40%  { transform: translate(0.5%, -0.5%);}
+  50%  { transform: translate(1%,   1%);   }
+  60%  { transform: translate(-0.5%, 0.5%);}
+  70%  { transform: translate(0,    1%);   }
+  80%  { transform: translate(1%,   -1%);  }
+  90%  { transform: translate(-1%,  0.5%); }
+  100% { transform: translate(0,    0);    }
+}
+
+@keyframes hero-word-in {
+  from {
+    opacity: 0;
+    transform: translateY(44px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes reveal-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gold-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center;  }
+}
+
+/* ---- Hero Animations (JS-triggered) ---- */
+
+.hero-label.revealed {
+  animation: reveal-fade-in 0.8s ease 0.2s both;
+}
+
+.hero-word.revealed {
+  animation: hero-word-in 0.7s var(--ease-out-cubic, cubic-bezier(0.33, 1, 0.68, 1)) both;
+}
+
+.hero-actions.revealed {
+  animation: reveal-fade-up 0.6s ease both;
+}
+
+/* ---- Scroll Reveal (Intersection Observer) ---- */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity  0.72s cubic-bezier(0.33, 1, 0.68, 1),
+    transform 0.72s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Grid stagger — CSS nth-child delays */
+.placements-grid .fade-up:nth-child(2),
+.services-grid   .fade-up:nth-child(2),
+.video-grid      .fade-up:nth-child(2),
+.clients-grid    .fade-up:nth-child(2),
+.facts-panel     .fade-up:nth-child(2) { transition-delay: 0.08s; }
+
+.placements-grid .fade-up:nth-child(3),
+.video-grid      .fade-up:nth-child(3),
+.clients-grid    .fade-up:nth-child(3),
+.facts-panel     .fade-up:nth-child(3) { transition-delay: 0.16s; }
+
+.placements-grid .fade-up:nth-child(4),
+.video-grid      .fade-up:nth-child(4),
+.clients-grid    .fade-up:nth-child(4),
+.facts-panel     .fade-up:nth-child(4) { transition-delay: 0.24s; }
+
+.placements-grid .fade-up:nth-child(5),
+.video-grid      .fade-up:nth-child(5),
+.clients-grid    .fade-up:nth-child(5) { transition-delay: 0.32s; }
+
+.placements-grid .fade-up:nth-child(6),
+.video-grid      .fade-up:nth-child(6),
+.clients-grid    .fade-up:nth-child(6) { transition-delay: 0.40s; }
+
+.clients-grid .fade-up:nth-child(7) { transition-delay: 0.48s; }
+.clients-grid .fade-up:nth-child(8) { transition-delay: 0.56s; }
+
+/* ---- Card Hover Glow ---- */
+.placement-card:hover,
+.service-card:hover,
+.video-card:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(212, 162, 76, 0.06);
+}
+
+/* ---- Gold Shimmer on Section Tag ---- */
+.section-tag {
+  background: linear-gradient(
+    90deg,
+    #d4a24c 0%,
+    #f0c877 45%,
+    #d4a24c 55%,
+    #b8862e 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gold-shimmer 4s linear infinite;
+}
+
+/* ---- Reduced Motion Override ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .grain-overlay {
+    animation: none;
+  }
+
+  .fade-up,
+  .hero-word,
+  .hero-label,
+  .hero-actions {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

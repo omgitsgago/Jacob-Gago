@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
           port: 21
-          server-dir: /public_html/
+          server-dir: /domains/jacobgago.com/public_html/
           state-name: .ftp-deploy-sync-state-v2.json
           log-level: verbose
           exclude: |

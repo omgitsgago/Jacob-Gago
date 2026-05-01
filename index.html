@@ -11,7 +11,36 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@jacobgago">
+  <meta name="twitter:title" content="Jacob Gago — GRAMMY-Nominated Producer & Creator">
+  <meta name="twitter:description" content="GRAMMY-nominated producer · Mixing & Mastering · Content Creator · LA">
+  <meta name="twitter:image" content="https://jacobgago.com/assets/images/og-image.jpg">
+  <meta name="author" content="Jacob Gago">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://jacobgago.com">
   <title>Jacob Gago — GRAMMY-Nominated Producer & Creator</title>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jacob Gago",
+    "url": "https://jacobgago.com",
+    "image": "https://jacobgago.com/assets/images/og-image.jpg",
+    "jobTitle": "Music Producer & Mixing Engineer",
+    "description": "GRAMMY-nominated music producer, mixing engineer, and content creator based in Los Angeles.",
+    "sameAs": [
+      "https://www.instagram.com/jacobgago",
+      "https://www.youtube.com/@jacobgago",
+      "https://twitter.com/jacobgago"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Los Angeles",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  }
+  </script>
 
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0a0a'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='14' font-weight='700' fill='%23d4a24c' text-anchor='middle'%3EJG%3C/text%3E%3C/svg%3E">
 
@@ -395,17 +424,13 @@
         <form
           class="contact-form fade-up"
           id="contact-form"
-          action="https://formspree.io/f/xeevkrgw"
+          action="https://api.web3forms.com/submit"
           method="POST"
           novalidate
         >
-          <!--
-            TODO BEFORE GOING LIVE: Wire the contact form to Formspree.
-            1. Sign up at https://formspree.io (free tier = 50 submissions/month)
-            2. Create a new form, set the destination email to contact@jacobgago.com
-            3. Formspree gives you a URL like https://formspree.io/f/abcdwxyz
-            4. Replace YOUR_FORM_ID above with just the code (e.g. abcdwxyz)
-          -->
+          <input type="hidden" name="access_key" value="0890d32b-7dd0-42b2-a261-fc18afee0fe0">
+          <input type="hidden" name="subject" value="New Contact from jacobgago.com">
+          <input type="hidden" name="from_name" value="jacobgago.com Contact Form">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>

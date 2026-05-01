@@ -217,7 +217,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================================
-//   CONTACT FORM — Formspree AJAX
+//   CONTACT FORM — Web3Forms AJAX
 // ============================================================
 if (form) {
   const select = form.querySelector('select');
@@ -240,21 +240,20 @@ if (form) {
     formStatus.className = 'form-status';
 
     try {
-      const res = await fetch(form.action, {
+      const res  = await fetch(form.action, {
         method: 'POST',
         body: new FormData(form),
         headers: { Accept: 'application/json' }
       });
+      const json = await res.json().catch(() => ({}));
 
-      if (res.ok) {
+      if (json.success) {
         formStatus.className = 'form-status success';
         formStatus.textContent = "Message sent \u2014 I'll be in touch shortly.";
         form.reset();
         if (select) select.classList.remove('has-value');
       } else {
-        const json = await res.json().catch(() => ({}));
-        const msg  = json?.errors?.[0]?.message ?? 'Submission failed. Please try again.';
-        throw new Error(msg);
+        throw new Error(json.message || 'Submission failed. Please try again.');
       }
     } catch (err) {
       formStatus.className = 'form-status error';
